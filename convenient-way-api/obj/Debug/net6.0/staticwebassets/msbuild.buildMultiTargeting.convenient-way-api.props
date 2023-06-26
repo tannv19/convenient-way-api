@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\convenient-way-api.props" />
+</Project>

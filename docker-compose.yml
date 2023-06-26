@@ -1,0 +1,31 @@
+version: '3.4'
+
+networks:
+  convenient-way-network:
+
+services:
+  convenient-way-api:
+    image: ${DOCKER_REGISTRY-}convenientwayapi
+    build:
+      context: .
+      dockerfile: convenient-way-api/Dockerfile
+    ports:
+      - 8001:80
+    depends_on:
+      - convenient-way-db
+    environment:
+      - DB_HOST=convenient-way-db
+      - DB_NAME=convenient_way
+      - DB_SA_PASSWORD=tannv123@
+    networks:
+      - convenient-way-network
+  convenient-way-db:
+    container_name: app-db
+    image: convenient-way-db-data
+    ports:
+      - 1435:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=tannv123@
+    networks:
+      - convenient-way-network

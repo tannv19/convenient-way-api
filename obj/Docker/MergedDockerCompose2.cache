@@ -1,0 +1,54 @@
+name: dockercompose1734957353066676115
+services:
+  convenient-way-api:
+    build:
+      context: E:\Workspace\tien_duong\convenient-way-api
+      dockerfile: convenient-way-api/Dockerfile
+    depends_on:
+      convenient-way-db:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DB_HOST: convenient-way-db
+      DB_NAME: ship-convenient
+      DB_SA_PASSWORD: tannv123@
+    image: convenientwayapi
+    networks:
+      convenient-way-network: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\nvtan\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\nvtan\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  convenient-way-db:
+    container_name: app-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: tannv123@
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      convenient-way-network: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1435"
+      protocol: tcp
+networks:
+  convenient-way-network:
+    name: dockercompose1734957353066676115_convenient-way-network
