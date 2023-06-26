@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\convenient-way-api.csproj": {}
+    "E:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\convenient-way-api.csproj": {}
   },
   "projects": {
-    "e:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\convenient-way-api.csproj": {
+    "E:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\convenient-way-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\convenient-way-api.csproj",
+        "projectUniqueName": "E:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\convenient-way-api.csproj",
         "projectName": "convenient-way-api",
-        "projectPath": "e:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\convenient-way-api.csproj",
+        "projectPath": "E:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\convenient-way-api.csproj",
         "packagesPath": "C:\\Users\\nvtan\\.nuget\\packages\\",
-        "outputPath": "e:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\obj\\",
+        "outputPath": "E:\\Workspace\\tien_duong\\convenient-way-api\\convenient-way-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nvtan\\AppData\\Roaming\\NuGet\\NuGet.Config",
